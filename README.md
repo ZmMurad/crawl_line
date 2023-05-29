@@ -22,5 +22,7 @@ pip install -r requirements.txt
 ```
 4. Запустить
 ```
+python manage.py makemigrations
 python manage.py runserver 0.0.0.0:8000
+python manage.py migrate
 ```
