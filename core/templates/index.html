@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <title>Бегущая строка</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Сайт для получения видео бегущей строки</h1>
+    <div class="form">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <p><input type="submit" value="Получить видео"></p>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
